@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackTracer", "StackTracer\StackTracer.csproj", "{65ED85B0-B1E0-4897-9A7B-74FFCB6E985A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65ED85B0-B1E0-4897-9A7B-74FFCB6E985A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65ED85B0-B1E0-4897-9A7B-74FFCB6E985A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65ED85B0-B1E0-4897-9A7B-74FFCB6E985A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65ED85B0-B1E0-4897-9A7B-74FFCB6E985A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0F0CFA0-F773-4891-B9A4-335D9990F3F2}
+	EndGlobalSection
+EndGlobal

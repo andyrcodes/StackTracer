@@ -1,0 +1,72 @@
+﻿@using StackTracer.Services.Interfaces
+@using Microsoft.AspNetCore.Identity
+@inject IProjectService projectService
+@inject IAttachmentService attachmentService
+@inject UserManager<AppUser> userManager
+
+<div class="card">
+    <div class="card-header bg-gradient-gray-dark">
+        <h5 class="card-title">My Projects</h5>
+
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body bg-gray-light">
+        @if ((await projectService.ListUserProjects(userManager.GetUserId(User))).Count() > 8)
+        {
+            <div class="row" id="myProj">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in await projectService.ListUserProjects(userManager.GetUserId(User)))
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    <a asp-controller="Projects" asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">Details <i class="fa fa-chevron-circle-right"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="row clearfix">
+                @foreach (var item in await projectService.ListUserProjects(userManager.GetUserId(User)))
+                {
+                    <div class="col-sm-6 col-md-3">
+                        <a asp-controller="Projects" asp-action="Details" asp-route-id="@item.Id">
+                            <div class="card">
+                                <div class="text-center">
+                                    @if (string.IsNullOrEmpty(item.ImagePath))
+                                    {
+                                        <img style="padding-top:.5rem" src="~/img/projectDefault.png" class="img-fluid" />
+                                    }
+                                    else
+                                    {
+                                        <img src="@attachmentService.DecodeAttachment(item.ImageData, item.ImagePath)" style="padding-top:.5rem" class="img-fluid" />
+                                    }
+                                </div>
+                                <div class="file-name">
+                                    <h5 class="text-center">@item.Name</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        <!-- /.row -->
+    </div>
+    <!-- ./card-body -->
+</div>

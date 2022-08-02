@@ -1,0 +1,85 @@
+﻿@using StackTracer.Enums
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stack Tracer</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- iCheck -->
+    <link href="~/css/icheck-bootstrap.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/css/adminlte.min.css" rel="stylesheet" />
+    <!-- overlayScrollbars -->
+    <link href="~/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <!-- summernote -->
+    <link href="~/css/summernote-bs4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="~/css/custom.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" style="margin-top: 5rem">
+        <div class="row">
+            <div class="col">
+                <img src="~/img/stack_tracer-02.png" class="rounded mx-auto d-block" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mx-auto d-block">
+                <div class="card bg-transparent">
+                    <div class="card-header bg-gray-dark">
+                        <h1 class="text-center text-light">Welcome to Stack Trace Issue Tracker</h1>
+                    </div>
+                    <div class="card-body bg-transparent">
+                        <div class="row">
+                            <div class="col text-light">
+                                <h5 class="text-bold">
+                                    Stack Tracer is an online issue tracking application that is functional and effective for both large and small businesses.
+                                </h5>
+                                <hr />
+                                <p>This application was built using C# ASP.NET 5 using both the MVC and MVVM design patterns. The front end is a Bootstrap 4 template</p>
+                                <p>Local development was built on MSSQL managed with Sql Server Management Studio. Production version is deployed on Heroku using CI/CD through GitHub with a PostgreSQL database managed with PGAdmin.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="btn btn-lg btn-logo mx-5 d-block" asp-area="Identity" asp-page="/Account/Login">Login <i class="fa fa-sign-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/js/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/js/Chart.min.js"></script>
+    <!-- Summernote -->
+    <script src="~/js/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/js/adminlte.min.js"></script>
+
+</body>
+</html>

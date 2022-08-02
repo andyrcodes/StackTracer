@@ -1,0 +1,42 @@
+﻿body, section.content, div.content-wrapper {
+    background-color: #100d19;
+}
+
+.btn-logo {
+    color: #ffffff;
+    background-color: #8D6A33;
+    border-color: #8D6A33;
+}
+
+.bg-custom {
+    background-color: #8D6A33 !important;
+}
+
+.wordWrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.topSpace {
+    padding-top: 1rem;
+}
+
+.bottomSpace {
+    padding-bottom: 1rem;
+}
+
+.ticketPriority {
+    background-color: #E2DED0;
+}
+
+.ticketType {
+    background-color: #746C70;
+}
+
+.ticketStatus {
+    background-color: #808080;
+}
+
+.ticketAssign {
+    background-color: #AEAEAE;
+}

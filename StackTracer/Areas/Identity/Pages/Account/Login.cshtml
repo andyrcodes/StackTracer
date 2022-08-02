@@ -1,0 +1,208 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stack Tracer | Login</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- iCheck -->
+    <link href="~/css/icheck-bootstrap.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/css/adminlte.min.css" rel="stylesheet" />
+    <!-- overlayScrollbars -->
+    <link href="~/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="~/css/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/custom.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <br />
+        <div class="row">
+            <div class="col">
+                <img src="~/img/stack_tracer-02.png" class="rounded mx-auto d-block" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <div class="login-box">
+                    <!-- /.login-logo -->
+                    <div class="card bg-transparent">
+                        <div class="card-header bg-gradient-gray-dark">
+                            <h5 class="card-title">Login to an Existing Account</h5>
+                        </div>
+                        <div class="card-body login-card-body text-light bg-transparent">
+
+                            <form id="account" method="post">
+                                <div class="input-group mb-3">
+                                    <input type="email" name="Email" class="form-control" placeholder="Email">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text bg-custom">
+                                            <span class="fas fa-envelope text-light"></span>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="password" name="Password" class="form-control" placeholder="Password">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text bg-custom">
+                                            <span class="fas fa-lock text-light"></span>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="icheck-primary">
+                                            <input name="RememberMe" type="checkbox" id="remember">
+                                            <label for="remember">
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-logo btn-block">Sign In</button>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                            </form>
+                            <p class="mb-1">
+                                <a id="forgot-password" href="#">Forgot your password?</a>
+                            </p>
+                        </div>
+                        <!-- /.login-card-body -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="card bg-transparent">
+                    <div class="card-header bg-gradient-gray-dark">
+                        <h5 class="card-title">Demo User Accounts</h5>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body bg-transparent">
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <div class="small-box bg-custom">
+                                    <div class="inner text-light">
+                                        <h3>Admin</h3>
+                                        <ul>
+                                            <li>Full Access</li>
+                                            <li>Adjust Settings</li>
+                                            <li>Manage All Users</li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <a href="javascript:void()" class="small-box-footer" id="demoAdminBtn">Log In <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="small-box bg-gray-dark">
+                                    <div class="inner">
+                                        <h3>Manager</h3>
+                                        <ul>
+                                            <li>Create/Manage Projects</li>
+                                            <li>Ticket Assignment</li>
+                                            <li>Manage Some Users</li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <a href="javascript:void()" class="small-box-footer" id="demoPMBtn">Log In <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="small-box bg-gray">
+                                    <div class="inner">
+                                        <h3>Developer</h3>
+                                        <ul>
+                                            <li>Recieves Tickets</li>
+                                            <li>Updates Tickets</li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-user-edit"></i>
+                                    </div>
+                                    <a href="javascript:void()" class="small-box-footer" id="demoDevBtn">Log In <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="small-box bg-gradient-gray">
+                                    <div class="inner">
+                                        <h3>Submitter</h3>
+                                        <ul>
+                                            <li>Limited Access</li>
+                                            <li>Creates Tickets</li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <a href="javascript:void()" class="small-box-footer" id="demoSubBtn">Log In <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- ./card-body -->
+                    <div class="card-footer bg-gradient-gray-dark">
+                        <div class="row text-center">
+                            <div class="col">
+                                The links above can be used to access a demo version of the application. For full read/write access please contact the developer.
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.card-footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="demoAdmin" method="post"><input type="hidden" name="demoEmail" value="DemoAdminEmail" /></form>
+    <form id="demoPM" method="post"><input type="hidden" name="demoEmail" value="DemoPMEmail" /></form>
+    <form id="demoDev" method="post"><input type="hidden" name="demoEmail" value="DemoDevEmail" /></form>
+    <form id="demoSub" method="post"><input type="hidden" name="demoEmail" value="DemoSubEmail" /></form>
+
+    <partial name="_ValidationScriptsPartial" />
+
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/js/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/js/adminlte.min.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+    <script src="~/js/loginScripts.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+
+</body>
+</html>
